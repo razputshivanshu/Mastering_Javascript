@@ -1,56 +1,77 @@
-// String 
+// ============================================================================
+// JavaScript String Operations: A Comprehensive Guide
+// ============================================================================
 
-//Strings can be denoted by single '' as well as "" double quotes.
+// 1. Declaring Strings
+// ---------------------------------------------------------------------------
+// • Single or double quotes:
+let greeting1 = 'Hello';
+let greeting2 = "World";
 
-console.log("hello" + "world");
+// • Template literals (backticks) for interpolation and multi-line:
+let name = 'Hitesh';
+let repoCount = 50;
 
-let name = "hitesh";
-const repoCount = 50;
+// ---------------------------------------------------------------------------
+// 2. Concatenation vs. Interpolation
+// ---------------------------------------------------------------------------
+// • Traditional concatenation with + (less recommended):
+console.log(greeting1 + ' ' + greeting2);          // "Hello World"
+console.log(name + repoCount + ' value');          // "Hitesh50 value"
 
+// • Template literals (recommended):
+console.log(`Hello, my name is ${name}. I have ${repoCount} repositories.`);
 
-//To concatenate we use '+'
-console.log(name + repoCount + " value");
+// ---------------------------------------------------------------------------
+// 3. String Object Constructor
+// ---------------------------------------------------------------------------
+// • Creates a String object (rarely needed):
+const gameName = new String('Chess');
+console.log(gameName);                              // [String: 'Chess']
 
-//But good practice is that we should not use + to concatenate in modern js
-// If we want to concatenate in mdoern JS, use backticks ``
+// ---------------------------------------------------------------------------
+// 4. Accessing Characters
+// ---------------------------------------------------------------------------
+console.log(name[0]);                                // 'H'
+console.log(name.charAt(2));                         // 't'
 
-console.log(`Hello my name is ${name}. And my Repo Count is ${repoCount}`);
-//Above one is string interpolation.
+// ---------------------------------------------------------------------------
+// 5. Common Properties & Methods
+// ---------------------------------------------------------------------------
+console.log(name.length);                            // 6
+console.log(name.indexOf('t'));                      // 2
 
+// substring(start, end) — excludes end, does NOT accept negative indices
+console.log(name.substring(0, 2));                   // 'Hi'
 
-console.log("hello");
+// slice(start, end) — excludes end, accepts negative indices
+console.log(name.slice(-4, 4));                      // 'te'
 
-//2nd way to declare a string, but the work for both will remain same
-const gameName = new String('Name');
-console.log(gameName);
-// let name = "hitesh";
-           //  012345
+// trim() — removes whitespace from both ends
+const padded = '   hitesh   ';
+console.log(padded.trim());                          // 'hitesh'
 
+// ---------------------------------------------------------------------------
+// 6. Replacing Content
+// ---------------------------------------------------------------------------
+let url = 'https://hitesh.com/hitesh%20chaudhary';
+// replace() replaces first match; use regex with /g for all occurrences
+let cleanUrl = url.replace(/%20/g, '-');
+console.log(cleanUrl);                               // 'https://hitesh.com/hitesh-chaudhary'
 
-console.log(name[0]);
-console.log(name.__proto__);
-console.log(name.length)
-console.log(name.charAt(2));
-console.log(name.indexOf('t'));
+// ---------------------------------------------------------------------------
+// 7. Checking Substrings
+// ---------------------------------------------------------------------------
+console.log(cleanUrl.includes('hitesh'));            // true
+console.log(cleanUrl.includes('Shivanshu'));         // false
 
-const newString = name.substring(0, 2); //it will include 0 1, last value will not be included
-console.log(newString); //Substring doesn't work with ngeative values 
+// ---------------------------------------------------------------------------
+// 8. Splitting Strings
+// ---------------------------------------------------------------------------
+let sentence = 'My name is Shivanshu Chauhan';
+let words = sentence.split(' ');
+console.log(words);                                  // ['My','name','is','Shivanshu','Chauhan']
 
-const newSlice = name.slice(-4, 4); //slice does work with negative values
-console.log(newSlice);
-
-
-const newStringOne = "     hitesh     ";
-console.log(newStringOne);
-console.log(newStringOne.trim());
-
-
-let url = "https://hitesh.com/hitesh%20chaudhary";
-
-url = url.replace('%20', '-');
-
-console.log(url);
-
-
-console.log(url.includes('hitesh'));
-console.log(url.includes('Shivanshu'));
+// ============================================================================
+// End of Guide
+// ============================================================================
