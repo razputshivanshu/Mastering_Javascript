@@ -33,7 +33,7 @@
 if (true) {
   const username = "Shiv";
   if (username === "Shiv") {
-    const website = "youtube";
+    const website = " youtube";
     console.log(username + website);
   }
   // console.log(website);
@@ -41,3 +41,29 @@ if (true) {
 }
 
 //  console.log(username);
+
+
+// ++++++++++++++++++++++++++++++++ interesting ++++++++++++++++++++++++++++++
+// let value = addone(5);
+// console.log(value);
+
+
+// function addone(num) {
+//   return num + 1;
+// }
+
+//No problem in above one
+
+
+addTwo(5);
+
+const addTwo = function (num) {
+  return num + 2;
+
+}
+
+//Now it is getting error becasue here we are declaring functions as a variable
+
+
+
+
