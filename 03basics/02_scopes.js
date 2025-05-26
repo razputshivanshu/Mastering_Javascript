@@ -1,13 +1,43 @@
-// var c = 300;
-let a = 20;
+// // var c = 300;
+// let a = 20;
 
-if(true){
-  let a = 10;
-  const b = 20;
-  // c = 30;
-  console.log("Inner", a);
-}
+// if(true){
+//   let a = 10;
+//   const b = 20;
+//   // c = 30;
+//   console.log("Inner", a);
+// }
 
-console.log(a);
+// console.log(a);
 // console.log(b);
 // console.log(c);
+
+
+// function one() {
+//   const username = "hitesh";
+//   function second() {
+//     const website = "youtube";
+//     console.log(username);
+//   }
+//   // console.log(website);
+//   second();
+// }
+
+
+// one();
+
+
+
+
+
+if (true) {
+  const username = "Shiv";
+  if (username === "Shiv") {
+    const website = "youtube";
+    console.log(username + website);
+  }
+  // console.log(website);
+ 
+}
+
+//  console.log(username);
